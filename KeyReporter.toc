@@ -1,0 +1,8 @@
+## Interface: 80307
+## Title: Key Reporter
+## Notes: Link your key if someone types !keys
+## Author: @icbat
+## Version: 1
+
+## This addon
+KeyReporter.lua
