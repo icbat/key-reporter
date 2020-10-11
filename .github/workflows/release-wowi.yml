@@ -34,6 +34,6 @@ jobs:
       with:
         id: 25711
         zipFilePath: KeyReporter.zip
-        compatible: 80300,80205,90000
+        compatible: 90001,80300,80205
         version: ${{ steps.get_versions.outputs.addon_version }}
         apiKey: ${{ secrets.WOW_INTERFACE }}
