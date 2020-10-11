@@ -1,3 +1,6 @@
+local _, namespace = ...
+local L = namespace.L
+
 -- incoming chat event name -> channel to respond in
 local eventToChannel = {
     CHAT_MSG_GUILD = "GUILD",
@@ -14,13 +17,13 @@ local eventToChannel = {
 
 local function BuildMessage()
     if C_MythicPlus.IsWeeklyRewardAvailable() then 
-        return "I need to open my chest!"
+        return L["I need to open my cache!"]
     end
 
     local mapID = C_MythicPlus.GetOwnedKeystoneChallengeMapID()
 
     if not mapID then 
-        return "I have no key"
+        return L["I have no key."]
     end
 
     return "" .. C_ChallengeMode.GetMapUIInfo(mapID) .. " " .. C_MythicPlus.GetOwnedKeystoneLevel()

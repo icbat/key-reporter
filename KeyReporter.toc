@@ -5,4 +5,5 @@
 ## Version: 1
 
 ## This addon
+Localization.lua
 KeyReporter.lua
