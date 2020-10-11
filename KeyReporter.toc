@@ -1,4 +1,4 @@
-## Interface: 80307
+## Interface: 90001
 ## Title: Key Reporter
 ## Notes: Link your key if someone types !keys
 ## Author: @icbat
