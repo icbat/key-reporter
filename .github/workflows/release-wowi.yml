@@ -1,5 +1,10 @@
 name: Release to WoW Interface
 
+env:
+  ADDON_NAME: KeyReporter
+  ADDON_BUNDLE_FILES: KeyReporter.lua Localization.lua LICENSE README.md
+  WOWI_ID: 25711
+
 on:
   workflow_dispatch:
     branches: [ main ]
@@ -13,27 +18,27 @@ jobs:
     steps:
     - name: Checkout the code
       uses: actions/checkout@v2
+
+    - name: Create 'dist' folder
+      run: mkdir ${{env.ADDON_NAME}}/
+
+    - name: Put everything into the folder
+      run: cp -r ${{ env.ADDON_BUNDLE_FILES }} ${{ env.ADDON_NAME }}.toc ${{env.ADDON_NAME}}/
   
     - name: Zip it good
-      run: zip -9 -r KeyReporter.zip KeyReporter.lua Localization.lua KeyReporter.toc LICENSE README.md
-      
-#     - name: What is here (for debugging)
-#       run: ls -lsa
+      run: zip -9 -r ${{env.ADDON_NAME}}.zip  ${{env.ADDON_NAME}}/
       
     - name: Parse WoW Addon Verions
       id: get_versions
       uses: icbat/parse-wow-addon-version@v0.0.1
       with:
-        tocfile:  KeyReporter.toc
+        tocfile: ${{ env.ADDON_NAME }}.toc
     
-#     - name: Echo Verisons
-#       run: echo ${{ steps.get_versions.outputs.supported_version }} ${{ steps.get_versions.outputs.addon_version }}
-
     - name: Upload to WoW Interface
       uses: icbat/wow-addon-upload-action@v0.0.4
       with:
-        id: 25711
-        zipFilePath: KeyReporter.zip
-        compatible: 90001,80300,80205
+        id: ${{ env.WOWI_ID }}
+        zipFilePath: ${{ env.ADDON_NAME }}.zip
+        compatible: ${{ steps.get_versions.outputs.supported_version }}
         version: ${{ steps.get_versions.outputs.addon_version }}
         apiKey: ${{ secrets.WOW_INTERFACE }}
