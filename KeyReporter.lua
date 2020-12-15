@@ -16,9 +16,9 @@ local eventToChannel = {
 }
 
 local function BuildMessage()
-    if C_MythicPlus.IsWeeklyRewardAvailable() then 
-        return L["I need to open my cache!"]
-    end
+    -- if C_MythicPlus.IsWeeklyRewardAvailable() then
+    --     return L["I need to open my cache!"]
+    -- end
 
     local mapID = C_MythicPlus.GetOwnedKeystoneChallengeMapID()
 
