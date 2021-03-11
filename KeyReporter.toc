@@ -2,7 +2,7 @@
 ## Title: Key Reporter
 ## Notes: Link your key if someone types !keys
 ## Author: @icbat
-## Version: 1
+## Version: 2
 
 ## This addon
 Localization.lua
