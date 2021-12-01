@@ -1,7 +1,7 @@
 Key Reporter
 ====================
 
-A Data Broker addon for showing you what dungeons/Looking For Raids will get you rewards right now.
+An addon for responding to !keys with what you've got this week. It also auto-inserts your keystone if it can.
 
 Get it on [WoW Interface](https://www.wowinterface.com/downloads/info25711-KeyReporter), or use the [Cursebreaker tool](https://github.com/AcidWeb/CurseBreaker) (recommended)
 
