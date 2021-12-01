@@ -7,3 +7,4 @@
 ## This addon
 Localization.lua
 KeyReporter.lua
+KeyInserter.lua
