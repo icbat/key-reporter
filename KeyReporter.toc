@@ -1,8 +1,8 @@
-## Interface: 90105
+## Interface: 90200
 ## Title: Key Reporter
 ## Notes: Link your key if someone types !keys
 ## Author: @icbat
-## Version: 6
+## Version: 7
 
 ## This addon
 Localization.lua
