@@ -4,7 +4,7 @@ local L = namespace.L
 -- incoming chat event name -> channel to respond in
 local eventToChannel = {
     -- uncomment for testing
-    -- CHAT_MSG_SAY = "EMOTE", -- This addon cannot send to SAY, but it can listen for it   
+    -- CHAT_MSG_SAY = "EMOTE", -- This addon cannot send to SAY, but it can listen for it
 
     CHAT_MSG_GUILD = "GUILD",
     CHAT_MSG_PARTY = "PARTY",
@@ -18,18 +18,11 @@ local eventToChannel = {
 local function BuildMessage()
     local mapID = C_MythicPlus.GetOwnedKeystoneChallengeMapID()
 
-    local covenantSuffix = ""
-    local covenantID = C_Covenants.GetActiveCovenantID()
-    if covenantID ~= 0 then
-        local covenantName = C_Covenants.GetCovenantData(covenantID)['name']
-        covenantSuffix = " (" .. covenantName .. ")"
-    end
-
     if not mapID then
         return L["I have no key."]
     end
 
-    return "" .. C_ChallengeMode.GetMapUIInfo(mapID) .. " " .. C_MythicPlus.GetOwnedKeystoneLevel() .. covenantSuffix
+    return "" .. C_ChallengeMode.GetMapUIInfo(mapID) .. " " .. C_MythicPlus.GetOwnedKeystoneLevel()
 end
 
 local function LookForChatCommand(self, event, text)
