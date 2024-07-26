@@ -1,8 +1,9 @@
-## Interface: 100002
+## Interface: 110000
 ## Title: Key Reporter
 ## Notes: Link your key if someone types !keys
 ## Author: @icbat
-## Version: 10
+## Version: 11
+## IconTexture: Interface/Addons/KeyReporter/ick-logo
 
 ## This addon
 Localization.lua
