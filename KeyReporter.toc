@@ -2,8 +2,12 @@
 ## Title: Key Reporter
 ## Notes: Link your key if someone types !keys
 ## Author: @icbat
-## Version: 11
 ## IconTexture: Interface/Addons/KeyReporter/ick-logo
+
+### BigWigs Packager Fields
+## Version: @project-version@
+## X-Wago-ID: rN4VXrKD
+## X-WoWI-ID: 25711
 
 ## This addon
 Localization.lua

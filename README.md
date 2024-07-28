@@ -1,9 +1,9 @@
 Key Reporter
-====================
+============
 
 An addon for responding to !keys with what you've got this week. It also auto-inserts your keystone if it can.
 
-Get it on [WoW Interface](https://www.wowinterface.com/downloads/info25711-KeyReporter), or use the [Cursebreaker tool](https://github.com/AcidWeb/CurseBreaker) (recommended)
+Get it on [WoW Interface](https://www.wowinterface.com/downloads/info25711-KeyReporter), [Wago](https://addons.wago.io/addons/key-reporter), or use the [Cursebreaker tool](https://github.com/AcidWeb/CurseBreaker) (recommended)
 
 ## Contributing
 
@@ -15,3 +15,7 @@ Get it on [WoW Interface](https://www.wowinterface.com/downloads/info25711-KeyRe
 ### Localization
 
 If you'd like to help localize the text here, simply follow the above steps and change the Localization.lua file to add your translations. Please submit an [issue on GitHub](https://github.com/icbat/key-reporter/issues) if you need any assistance with this workflow.
+
+### Releasing
+
+Release new versions by pushing a tag to the main branch of the form `v12345`. The GitHub action should take care of the rest. 
