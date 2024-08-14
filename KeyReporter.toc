@@ -1,4 +1,4 @@
-## Interface: 110000
+## Interface: 110002
 ## Title: Key Reporter
 ## Notes: Link your key if someone types !keys
 ## Author: @icbat
